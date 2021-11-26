@@ -65,3 +65,11 @@ section {
   display: grid;
   grid-template-rows: 1fr 1.75fr;
 }
+
+/* .x::after {
+  content: 'x';
+}
+
+.o::after {
+  content: 'o';
+} */

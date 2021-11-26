@@ -1,0 +1,43 @@
+* {
+  background-color: rgba(0, 40, 0, 0.1);
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+main {
+  height: inherit;
+  display: grid;
+  place-items: center;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.board {
+  height: 50vh;
+  width: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.left {
+  border-right-style: solid;
+}
+.top {
+  border-bottom-style: solid;
+}
+.right {
+  border-left-style: solid;
+}
+.bottom {
+  border-top-style: solid;
+}
+/* section {
+  display: grid;
+  place-items: center;
+} */

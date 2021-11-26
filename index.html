@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Tic Tac Toe</title>
 </head>
 <body>
     <main>
-        <section class="board">
-            <div class="square top left">stl</div>
-            <div class="square top">st</div>
-            <div class="square top right">str</div>
-            <div class="square left">sl</div>
-            <div class="square">s</div>
-            <div class="square right">sr</div>
-            <div class="square bottom left">sbl</div>
-            <div class="square bottom">sb</div>
-            <div class="square bottom right">sbr</div>
-        </section>
-        <section class="scores">
-            <p class="player1"></p>
-            <p class="ties"></p>
-            <p class="player2"></p>
+        <section class="game-content">
+            <section class="board">
+                <div class="square top left">stl</div>
+                <div class="square top">st</div>
+                <div class="square top right">str</div>
+                <div class="square left">sl</div>
+                <div class="square">s</div>
+                <div class="square right">sr</div>
+                <div class="square bottom left">sbl</div>
+                <div class="square bottom">sb</div>
+                <div class="square bottom right">sbr</div>
+            </section>
+            <section class="scores">
+                <div class="player1 score-content">
+                    <h3 class="score-title">Player (X)</h3>
+                    <h1 class="score-count">0</h1>
+                </div>
+                <div class="ties score-content">
+                    <h3 class="score-title">Tie</h3>
+                    <h1 class="score-count">0</h1>
+                </div>
+                <div class="player2 score-content">
+                    <h3 class="score-title">Player (O)</h3>
+                    <h1 class="score-count">0</h1>
+                </div>
+            </section>
         </section>
     </main>
     <script src="js/main.js"></script>

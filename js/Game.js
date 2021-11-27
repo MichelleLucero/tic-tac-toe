@@ -21,6 +21,12 @@ export default class Game {
         }
       });
     });
+    this.resetButton.addEventListener('click', (event) => {
+      this.resetSquares();
+      this.isGameOver = false;
+      this.turn = 'X';
+      this.gameStatus.textContent = `Player ${this.turn}'s Turn`;
+    });
   }
   isSquareEmpty(event) {
     return event.target.textContent === '' ? true : false;
@@ -86,5 +92,11 @@ export default class Game {
       this.checkTie();
     }
     this.updateTurn();
+  }
+
+  resetSquares() {
+    this.squares.forEach((square) => {
+      square.textContent = '';
+    });
   }
 }

@@ -1,13 +1,14 @@
 export default class Game {
-  constructor(squares) {
+  constructor(squares, gameStatus) {
     this.isGameOver = false;
     this.turn = 'x';
+    this.gameStatus = gameStatus;
     this.squares = squares;
     this.squares.forEach((square) => {
       // console.log(square);
       square.addEventListener('click', (event) => {
         if (this.isSquareEmpty(event) && !this.isGameOver) {
-          this.updateBoard(event);
+          this.updateGame(event);
         }
       });
     });
@@ -36,7 +37,7 @@ export default class Game {
         this.squares[index2].textContent === playerType &&
         this.squares[index3].textContent === playerType
       ) {
-        alert(`${playerType} won`);
+        this.gameStatus.textContent = `Player ${playerType} won`;
         this.isGameOver = true;
         return true;
       }
@@ -44,7 +45,6 @@ export default class Game {
     return false;
   }
   checkTie() {
-    console.log('still ran');
     const totalSquares = this.squares.length;
     let count = 0;
     this.squares.forEach((square) => {
@@ -54,13 +54,13 @@ export default class Game {
     });
     if (totalSquares === count) {
       this.isGameOver = true;
-      alert('TIE');
+      this.gameStatus.textContent = "It's a tie!";
       return true;
     }
     return false;
   }
 
-  updateBoard(event) {
+  updateGame(event) {
     event.target.textContent = this.turn;
     this.checkWin(this.turn);
     if (!this.isGameOver) {

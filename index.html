@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="#">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -23,18 +24,23 @@
                 <div id="7" class="square bottom"></div>
                 <div id="8" class="square bottom right"></div>
             </section>
-            <section class="scores">
-                <div class="playerX score-content">
-                    <h3 class="score-title">Player (X)</h3>
-                    <h1 class="score-count">0</h1>
-                </div>
-                <div class="ties score-content">
-                    <h3 class="score-title">Tie</h3>
-                    <h1 class="score-count">0</h1>
-                </div>
-                <div class="playerO score-content">
-                    <h3 class="score-title">Player (O)</h3>
-                    <h1 class="score-count">0</h1>
+            <section class="bottom-content">
+                <section class="scores">
+                    <div class="playerX score-content">
+                        <h3 class="score-title">Player (X)</h3>
+                        <h1 class="score-count">0</h1>
+                    </div>
+                    <div class="ties score-content">
+                        <h3 class="score-title">Tie</h3>
+                        <h1 class="score-count">0</h1>
+                    </div>
+                    <div class="playerO score-content">
+                        <h3 class="score-title">Player (O)</h3>
+                        <h1 class="score-count">0</h1>
+                    </div>
+                </section>
+                <div id='reset'>
+                    <span class="iconify" data-icon="bi:arrow-repeat" data-width="50" data-height="50"></span>
                 </div>
             </section>
         </section>

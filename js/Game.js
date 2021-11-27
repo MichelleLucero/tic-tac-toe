@@ -34,7 +34,7 @@ export default class Game {
   updateTurn() {
     if (!this.isGameOver) {
       this.turn === 'X' ? (this.turn = 'O') : (this.turn = 'X');
-      this.gameStatus.textContent = `Player ${this.turn}'s Turn`;
+      this.gameStatus.textContent = `PLAYER ${this.turn}'S TURN`;
     }
   }
   updateScore(scoreToUpdate) {
@@ -58,7 +58,7 @@ export default class Game {
         this.squares[index2].textContent === playerType &&
         this.squares[index3].textContent === playerType
       ) {
-        this.gameStatus.textContent = `Player ${playerType} won`;
+        this.gameStatus.textContent = `PLAYER ${playerType} WON`;
         playerType === 'X'
           ? this.updateScore(this.playerXScoreCount)
           : this.updateScore(this.playerOScoreCount);
@@ -79,7 +79,7 @@ export default class Game {
     if (totalSquares === count) {
       this.isGameOver = true;
       this.updateScore(this.tieScoreCount);
-      this.gameStatus.textContent = "It's a tie!";
+      this.gameStatus.textContent = 'TIE';
       return true;
     }
     return false;

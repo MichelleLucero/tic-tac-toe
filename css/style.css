@@ -7,6 +7,9 @@ body {
   height: 100vh;
   background-color: #000;
   color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -19,6 +22,11 @@ section {
   margin: 0 auto;
 }
 
+#game-status {
+  text-align: center;
+  font-size: 5vh;
+}
+
 .board {
   height: 65vh;
   width: 65vh;
@@ -29,6 +37,9 @@ section {
 
 .square {
   border-color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 17vh;
 }
 
 .left {
@@ -62,12 +73,14 @@ section {
 .score-title {
   margin-bottom: 0px;
   text-align: center;
+  font-size: 3vh;
 }
 
 .score-count {
   margin: 0px;
   display: grid;
   place-items: center;
+  font-size: 5vh;
 }
 
 #reset-container {

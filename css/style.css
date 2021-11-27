@@ -44,11 +44,19 @@ section {
   border-top-style: solid;
 }
 
+.bottom-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
 .scores {
-  width: 70%;
+  grid-column: 2 / span 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+}
+
+.score-content {
+  display: grid;
+  grid-template-rows: 1fr 1.75fr;
 }
 
 .score-title {
@@ -61,15 +69,8 @@ section {
   display: grid;
   place-items: center;
 }
-.score-content {
+
+#reset-container {
   display: grid;
-  grid-template-rows: 1fr 1.75fr;
+  place-items: center;
 }
-
-/* .x::after {
-  content: 'x';
-}
-
-.o::after {
-  content: 'o';
-} */

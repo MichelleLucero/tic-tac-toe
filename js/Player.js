@@ -1,5 +1,5 @@
 export default class Player {
-  constructor() {
-    console.log('Player');
+  constructor(playerType) {
+    this.playerType = playerType;
   }
 }

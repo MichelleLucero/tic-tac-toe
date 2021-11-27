@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="#"> -->
     <title>Tic Tac Toe</title>
 </head>
 <body>
     <main>
         <section class="game-content">
+            <section class="game-status">GAME STATUS</section>
             <section class="board">
-                <div class="square top left"></div>
-                <div class="square top"></div>
-                <div class="square top right"></div>
-                <div class="square left"></div>
-                <div class="square"></div>
-                <div class="square right"></div>
-                <div class="square bottom left"></div>
-                <div class="square bottom"></div>
-                <div class="square bottom right"></div>
+                <div id="0" class="square top left"></div>
+                <div id="1" class="square top"></div>
+                <div id="2" class="square top right"></div>
+                <div id="3" class="square left"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square right"></div>
+                <div id="6" class="square bottom left"></div>
+                <div id="7" class="square bottom"></div>
+                <div id="8" class="square bottom right"></div>
             </section>
             <section class="scores">
-                <div class="player1 score-content">
+                <div class="playerX score-content">
                     <h3 class="score-title">Player (X)</h3>
                     <h1 class="score-count">0</h1>
                 </div>
@@ -30,7 +32,7 @@
                     <h3 class="score-title">Tie</h3>
                     <h1 class="score-count">0</h1>
                 </div>
-                <div class="player2 score-content">
+                <div class="playerO score-content">
                     <h3 class="score-title">Player (O)</h3>
                     <h1 class="score-count">0</h1>
                 </div>

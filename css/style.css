@@ -24,7 +24,7 @@ section {
 
 #game-status {
   text-align: center;
-  font-size: 5vh;
+  font-size: 4vh;
 }
 
 .board {
@@ -73,14 +73,14 @@ section {
 .score-title {
   margin-bottom: 0px;
   text-align: center;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 .score-count {
   margin: 0px;
   display: grid;
   place-items: center;
-  font-size: 5vh;
+  font-size: 5.5vh;
 }
 
 #reset-container {

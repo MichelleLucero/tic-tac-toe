@@ -1,7 +1,7 @@
 export default class Game {
   constructor(squares, gameStatus) {
     this.isGameOver = false;
-    this.turn = 'x';
+    this.turn = 'X';
     this.gameStatus = gameStatus;
     this.squares = squares;
     this.squares.forEach((square) => {
@@ -17,7 +17,10 @@ export default class Game {
     return event.target.textContent === '' ? true : false;
   }
   updateTurn() {
-    this.turn === 'x' ? (this.turn = 'o') : (this.turn = 'x');
+    if (!this.isGameOver) {
+      this.turn === 'X' ? (this.turn = 'O') : (this.turn = 'X');
+      this.gameStatus.textContent = `Player ${this.turn}'s Turn`;
+    }
   }
   checkWin(playerType) {
     const winningCombos = [

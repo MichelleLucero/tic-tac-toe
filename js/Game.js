@@ -1,11 +1,20 @@
 export default class Game {
-  constructor(squares, gameStatus) {
+  constructor(gameContentDOM) {
+    this.gameContentDOM = gameContentDOM;
+    this.squares = this.gameContentDOM.querySelectorAll('.square');
+    this.gameStatus = this.gameContentDOM.querySelector('#game-status');
+    this.resetButton = this.gameContentDOM.querySelector('.reset');
+    this.playerXScoreCount = this.gameContentDOM.querySelector(
+      '.playerX .score-count'
+    );
+    this.tieScoreCount =
+      this.gameContentDOM.querySelector('.ties .score-count');
+    this.playerOScoreCount = this.gameContentDOM.querySelector(
+      '.playerO .score-count'
+    );
     this.isGameOver = false;
     this.turn = 'X';
-    this.gameStatus = gameStatus;
-    this.squares = squares;
     this.squares.forEach((square) => {
-      // console.log(square);
       square.addEventListener('click', (event) => {
         if (this.isSquareEmpty(event) && !this.isGameOver) {
           this.updateGame(event);
@@ -21,6 +30,9 @@ export default class Game {
       this.turn === 'X' ? (this.turn = 'O') : (this.turn = 'X');
       this.gameStatus.textContent = `Player ${this.turn}'s Turn`;
     }
+  }
+  updateScore(scoreToUpdate) {
+    scoreToUpdate.textContent = parseInt(scoreToUpdate.textContent) + 1;
   }
   checkWin(playerType) {
     const winningCombos = [
@@ -41,6 +53,9 @@ export default class Game {
         this.squares[index3].textContent === playerType
       ) {
         this.gameStatus.textContent = `Player ${playerType} won`;
+        playerType === 'X'
+          ? this.updateScore(this.playerXScoreCount)
+          : this.updateScore(this.playerOScoreCount);
         this.isGameOver = true;
         return true;
       }
@@ -57,6 +72,7 @@ export default class Game {
     });
     if (totalSquares === count) {
       this.isGameOver = true;
+      this.updateScore(this.tieScoreCount);
       this.gameStatus.textContent = "It's a tie!";
       return true;
     }

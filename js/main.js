@@ -1,11 +1,6 @@
 import Game from './Game.js';
-import Player from './Player.js';
-
-const squares = document.querySelectorAll('.square');
-const gameStatus = document.querySelector('#game-status');
-// const playerX = new Player('x');
-// const playerO = new Player('o');
-const game = new Game(squares, gameStatus);
+const gameContent = document.querySelector('.game-content');
+const game = new Game(gameContent);
 console.log('main');
 
 // const hello = (e) => {

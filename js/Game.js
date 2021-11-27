@@ -40,10 +40,11 @@ export default class Game {
         this.isGameOver = true;
         return true;
       }
-      return false;
     });
+    return false;
   }
-  isBoardFull() {
+  checkTie() {
+    console.log('still ran');
     const totalSquares = this.squares.length;
     let count = 0;
     this.squares.forEach((square) => {
@@ -51,20 +52,19 @@ export default class Game {
         count += 1;
       }
     });
-    this.isFull = totalSquares === count;
-  }
-  updateBoard(event) {
-    if (this.turn === 'x') {
-      event.target.textContent = 'x';
-      this.checkWin('x');
-    } else {
-      event.target.textContent = 'o';
-      this.checkWin('o');
-    }
-    this.isBoardFull();
-    if (this.isFull) {
-      alert('tie');
+    if (totalSquares === count) {
       this.isGameOver = true;
+      alert('TIE');
+      return true;
+    }
+    return false;
+  }
+
+  updateBoard(event) {
+    event.target.textContent = this.turn;
+    this.checkWin(this.turn);
+    if (!this.isGameOver) {
+      this.checkTie();
     }
     this.updateTurn();
   }

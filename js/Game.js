@@ -25,7 +25,7 @@ export default class Game {
       this.resetSquares();
       this.isGameOver = false;
       this.turn = 'X';
-      this.gameStatus.textContent = `Player ${this.turn}'s Turn`;
+      this.gameStatus.textContent = `PLAYER ${this.turn}'S TURN`;
     });
   }
   isSquareEmpty(event) {

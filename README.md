@@ -3,7 +3,7 @@
 Built a two player version of tic-tac-toe using Javascript, HTML, and CSS
 
 ### Wireframe
-My design for the front-end was heavily influenced by https://playtictactoe.org/ .
+My design for the front-end was heavily influenced by https://playtictactoe.org/
 
 ### Demo
 ![Alt Text](https://github.com/MichelleLucero/tic-tac-toe/blob/main/images/play-preview.gif "Demo")

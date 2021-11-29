@@ -1,10 +1,10 @@
 # tic-tac-toe
 ### Desciption
-
 Built a two player version of tic-tac-toe using Javascript, HTML, and CSS
 
 ### Demo
 ![Alt Text](https://github.com/MichelleLucero/tic-tac-toe/blob/main/images/play-preview.gif "Demo")
+
 [Deployed on Github Pages](https://michellelucero.github.io/tic-tac-toe/)
 
 ## MVP - Bronze:

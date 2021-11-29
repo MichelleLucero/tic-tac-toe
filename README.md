@@ -2,6 +2,9 @@
 ### Desciption
 Built a two player version of tic-tac-toe using Javascript, HTML, and CSS
 
+### Wireframe
+My design for the front-end was heavily influenced by https://playtictactoe.org/ .
+
 ### Demo
 ![Alt Text](https://github.com/MichelleLucero/tic-tac-toe/blob/main/images/play-preview.gif "Demo")
 
@@ -20,3 +23,4 @@ Built a two player version of tic-tac-toe using Javascript, HTML, and CSS
 ## MVP - Silver:
 - Keep track of multiple game rounds with a win, lose and tie counter
 - Make your site fully responsive so that it is playable from a mobile phone
+

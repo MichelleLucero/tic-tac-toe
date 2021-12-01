@@ -17,7 +17,14 @@ export default class Game {
     this.squares.forEach((square) => {
       square.addEventListener('click', (event) => {
         if (this.isSquareEmpty(event) && !this.isGameOver) {
+          square.classList.remove('empty');
           this.updateGame(event);
+        }
+      });
+      // EDIT THIS
+      square.addEventListener('mouseover', (event) => {
+        if (this.isSquareEmpty(event)) {
+          square.setAttribute('turn', this.turn);
         }
       });
     });
@@ -63,6 +70,12 @@ export default class Game {
           ? this.updateScore(this.playerXScoreCount)
           : this.updateScore(this.playerOScoreCount);
         this.isGameOver = true;
+        //remove empty class so hover effect doesn't show up after game is over
+        this.squares.forEach((square) => {
+          if (square.classList.contains('empty')) {
+            square.classList.remove('empty');
+          }
+        });
         return true;
       }
     });
@@ -96,6 +109,7 @@ export default class Game {
 
   resetSquares() {
     this.squares.forEach((square) => {
+      square.classList.add('empty');
       square.textContent = '';
     });
   }

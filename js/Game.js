@@ -17,13 +17,15 @@ export default class Game {
     this.squares.forEach((square) => {
       square.addEventListener('click', (event) => {
         if (this.isSquareEmpty(event) && !this.isGameOver) {
+          // removes the hover effect bc square is no longer empty
           square.classList.remove('empty');
           this.updateGame(event);
         }
       });
-      // EDIT THIS
+      // allows X or O shows up on empty squares
       square.addEventListener('mouseover', (event) => {
         if (this.isSquareEmpty(event)) {
+          // sets the hover content to player's turn
           square.setAttribute('turn', this.turn);
         }
       });

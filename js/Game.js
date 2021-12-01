@@ -70,6 +70,12 @@ export default class Game {
           ? this.updateScore(this.playerXScoreCount)
           : this.updateScore(this.playerOScoreCount);
         this.isGameOver = true;
+        //remove empty class so hover effect doesn't show up after game is over
+        this.squares.forEach((square) => {
+          if (square.classList.contains('empty')) {
+            square.classList.remove('empty');
+          }
+        });
         return true;
       }
     });

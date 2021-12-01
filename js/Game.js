@@ -17,7 +17,14 @@ export default class Game {
     this.squares.forEach((square) => {
       square.addEventListener('click', (event) => {
         if (this.isSquareEmpty(event) && !this.isGameOver) {
+          square.classList.remove('empty');
           this.updateGame(event);
+        }
+      });
+      // EDIT THIS
+      square.addEventListener('mouseover', (event) => {
+        if (this.isSquareEmpty(event)) {
+          square.setAttribute('turn', this.turn);
         }
       });
     });

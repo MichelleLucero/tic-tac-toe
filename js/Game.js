@@ -103,6 +103,7 @@ export default class Game {
 
   resetSquares() {
     this.squares.forEach((square) => {
+      square.classList.add('empty');
       square.textContent = '';
     });
   }

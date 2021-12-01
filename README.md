@@ -23,4 +23,5 @@ My design for the front-end was heavily influenced by https://playtictactoe.org/
 ## MVP - Silver:
 - Keep track of multiple game rounds with a win, lose and tie counter
 - Make your site fully responsive so that it is playable from a mobile phone
+- Get inventive with your styling e.g. use hover effects or animations
 

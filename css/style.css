@@ -28,8 +28,8 @@ section {
 }
 
 .board {
-  height: 65vh;
-  width: 65vh;
+  /* height: 65vh; */
+  /* width: 65vh; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -91,9 +91,22 @@ section {
 .reset:hover,
 .empty:hover {
   background-color: rgb(20, 20, 20);
-  /* color: white; */
 }
 
 .empty:hover::before {
   content: attr(turn);
+}
+
+@media (orientation: landscape) {
+  .board {
+    height: 65vh;
+    width: 65vh;
+  }
+}
+
+@media (orientation: portrait) {
+  .board {
+    height: 65vw;
+    width: 65vw;
+  }
 }

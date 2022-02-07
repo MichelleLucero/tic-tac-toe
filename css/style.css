@@ -122,8 +122,8 @@ section {
 
 @media (orientation: portrait) {
   .board {
-    height: 65vw;
-    width: 65vw;
+    height: 60vw;
+    width: 60vw;
   }
 
   #game-status {
@@ -131,14 +131,14 @@ section {
   }
 
   .square {
-    font-size: 17vw;
+    font-size: 9vw;
   }
 
   .score-title {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .score-count {
-    font-size: 5.5vw;
+    font-size: 5vw;
   }
 }

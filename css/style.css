@@ -24,7 +24,7 @@ section {
 
 #game-status {
   text-align: center;
-  font-size: 4vh;
+  /* font-size: 4vh; */
 }
 
 .board {
@@ -39,7 +39,7 @@ section {
   border-color: #fff;
   display: grid;
   place-items: center;
-  font-size: 17vh;
+  /* font-size: 17vh; */
 }
 
 .left {
@@ -73,14 +73,14 @@ section {
 .score-title {
   margin-bottom: 0px;
   text-align: center;
-  font-size: 2.5vh;
+  /* font-size: 2.5vh; */
 }
 
 .score-count {
   margin: 0px;
   display: grid;
   place-items: center;
-  font-size: 5.5vh;
+  /* font-size: 5.5vh; */
 }
 
 #reset-container {
@@ -102,11 +102,43 @@ section {
     height: 65vh;
     width: 65vh;
   }
+
+  #game-status {
+    font-size: 4vh;
+  }
+
+  .square {
+    font-size: 17vh;
+  }
+
+  .score-title {
+    font-size: 2.5vh;
+  }
+
+  .score-count {
+    font-size: 5.5vh;
+  }
 }
 
 @media (orientation: portrait) {
   .board {
     height: 65vw;
     width: 65vw;
+  }
+
+  #game-status {
+    font-size: 4vw;
+  }
+
+  .square {
+    font-size: 17vw;
+  }
+
+  .score-title {
+    font-size: 2.5vw;
+  }
+
+  .score-count {
+    font-size: 5.5vw;
   }
 }
